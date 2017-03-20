@@ -20,6 +20,7 @@ return [
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
+            'baseUrl' => '', 
         ],
         'mail' => [
             'class'            => 'zyx\phpmailer\Mailer',
@@ -58,14 +59,16 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
         'urlManager' => [
+            'class' => 'yii\web\UrlManager',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'enableStrictParsing' => false,
             'rules' => [
+                //'contact' => 'main/main/contact',
+                '<action>' => 'main/main/<action>',
             ],
-        ],
-        */
+        ]
     ],
     'params' => $params,
 ];
