@@ -6,6 +6,8 @@
 		
 		<div class="container">
 
+                    <img src="/source/img/featured_placeholder_1.jpg" class="image" alt="" />
+                    <br><br>
                     
                   <div class="row">
 			
@@ -19,26 +21,18 @@
 						<p>Туристический поход в Карпаты – это памятное приключение с бесподобными видами и новыми друзьями. Мы предлагаем походы от трех до шести дней. 
                                                     Для желающих можем подобрать индивидуальный маршрут.</p>
 					</div>
-					
-					
 				</div>
-				
-				<div class="col-xlarge-3">
-                                    <ul id="portfolio-item-filter" class="font-reg clearfix">
-					<div class="detail-block">
-						<a href="#" class="active" data-filter="*">все маршруты</a>					</div>
-					<div class="detail-block">
-						<a href="#" data-filter=".design">3 дневные</a>
-					</div>
-					<div class="detail-block">
-						<a href="#" data-filter=".photography">6 дневные</a>
-					</div>
-                                    </ul>  
-				</div>
-			
 			</div>  
                     
-	
+                     <!-- Portfolio filter -->
+                    <div class="row">
+                                <ul id="portfolio-item-filter" class="font-reg clearfix">
+                                        <li><a href="#" class="active" data-filter="*">ВСЕ МАРШРУТЫ</a></li>
+                                        <li><a href="#" data-filter=".design">3-х дневные</a></li>
+                                        <li><a href="#" data-filter=".photography">6-ти дневные</a></li>
+                                        <li><a href="#" data-filter=".print-design"></a></li>
+                                 </ul>
+                    </div>
 	
 			<!-- portfolio item list -->
 			<ul id="portfolio-items" class="row clearfix">
