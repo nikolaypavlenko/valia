@@ -19,21 +19,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'name') ?>
 
-    <?= $form->field($model, 'photo1') ?>
+    <?= $form->field($model, 'photo') ?>
 
-    <?= $form->field($model, 'photo2') ?>
+    <?= $form->field($model, 'duration') ?>
 
-    <?= $form->field($model, 'photo3') ?>
+    <?= $form->field($model, 'status') ?>
 
-    <?php // echo $form->field($model, 'road') ?>
-
-    <?php // echo $form->field($model, 'duration') ?>
-
-    <?php // echo $form->field($model, 'complexity') ?>
-
-    <?php // echo $form->field($model, 'price') ?>
-
-    <?php // echo $form->field($model, 'description') ?>
+  
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

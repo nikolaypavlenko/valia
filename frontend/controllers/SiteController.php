@@ -81,7 +81,7 @@ class SiteController extends Controller
     {
         
         $listKarpaty =   Karpaty::getListKarpaty();
-       // var_dump($rows);
+        var_dump($listKarpaty); die();
        // var_dump( $img = $rows->image1);
       //  foreach ($listKarpaty as $row) {
              

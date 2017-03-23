@@ -19,8 +19,10 @@ class MainAsset extends  AssetBundle{
 
     public $js = [
         'source/js/lib/owl-carousel/owl.carousel.css',
-       'source/js/lib/owl-carousel/owl.carousel.min.js',
-       'source/js/main.js',
+        'source/js/lib/owl-carousel/owl.carousel.min.js',
+        'source/js/main.js',
+        'source/js/lib/isotope/isotope.js',
+        'source/js/lib/isotope/packery.js',
 
     ];
 

@@ -35,10 +35,9 @@ class Karpaty extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name','photo1', 'photo2', 'photo3', 'road', 'duration', 'complexity', 'price', 'description'], 'required'],
-            [['road'], 'string'],
-            [['price', 'description'], 'integer'],
-            [['name', 'photo2', 'photo3', 'duration', 'complexity'], 'string', 'max' => 255],
+            [['name', 'duration',  'status'], 'required'],
+            //[['status'], 'integer'],
+            //[['name', 'photo', 'duration', ], 'string', 'max' => 255],
         ];
     }
 
@@ -49,16 +48,10 @@ class Karpaty extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'photo1' => 'Photo1',
-            'photo2' => 'Photo2',
-            'photo3' => 'Photo3',
-            'road' => 'Road',
-            'duration' => 'DDDuration',
-            'complexity' => 'Complexity',
-            'price' => 'Price',
-            'description' => 'Description',
-            'imageFile' => 'ImageFile',
+            'name' => 'назва маршруту',
+            'photo' => 'фото',
+            'duration' => 'тривалість',
+            'status' => 'статус',
         ];
     }
     

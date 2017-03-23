@@ -14,7 +14,8 @@
 							<div class="footer-about-section">
 								<h4 class="font-reg">About</h4>
 								<div class="page-content">
-									<p>Nunc laoreet ac neque mattis efficitur. In eu lacus erat. Ut tincidunt luctus sapien, sed fermentum eros malesuada dignissim. Maecenas id ligula nisl. Curabitur a justo leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla lacus orci, luctus sit amet lacinia, per inceptos himenaeos.</p>
+									<p>Вы можете заказать для вашей компании индивидуальный поход в Карпаты по одному из маршрутов. 
+Бывает, что дата в графике не подходит, а ваша компания имеет огромное желание побродить по горам. В таком случае нужно выбрать маршрут, предполагаемую дату похода и сообщить нам.</p>
 								</div>
 							</div>
 						</div>

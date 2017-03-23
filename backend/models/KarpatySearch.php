@@ -18,8 +18,8 @@ class KarpatySearch extends Karpaty
     public function rules()
     {
         return [
-            [['id', 'price', 'description'], 'integer'],
-            [['name', 'photo1', 'photo2', 'photo3', 'road', 'duration', 'complexity'], 'safe'],
+            [['id', 'status'], 'integer'],
+            [['name', 'photo', 'duration', 'status'], 'safe'],
         ];
     }
 
@@ -60,17 +60,15 @@ class KarpatySearch extends Karpaty
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'price' => $this->price,
-            'description' => $this->description,
+            'name' => $this->name,
+            'duration' => $this->duration,
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'photo1', $this->photo1])
-            ->andFilterWhere(['like', 'photo2', $this->photo2])
-            ->andFilterWhere(['like', 'photo3', $this->photo3])
-            ->andFilterWhere(['like', 'road', $this->road])
+            ->andFilterWhere(['like', 'photo', $this->photo])
+          
             ->andFilterWhere(['like', 'duration', $this->duration])
-            ->andFilterWhere(['like', 'complexity', $this->complexity]);
+            ->andFilterWhere(['like', 'status', $this->status]);
 
         return $dataProvider;
     }

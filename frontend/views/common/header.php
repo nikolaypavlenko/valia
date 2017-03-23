@@ -34,40 +34,13 @@ use yii\web\UrlManager;
 						
 						<!-- Nav item - with two tier drop down -->
 						<li class="menu-item menu-item-has-children">
-							<a href="index.html">Home<span class="sub-drop-icon fa fa-angle-down"></span></a>
-							<ul class="sub-menu sub-menu-first">
-								<li><a href="index-portfolio.html">Portfolio</a></li>
-								<li class="menu-item menu-item-has-children">
-									<a href="index.html">Blog<span class="sub-drop-icon sub-second-drop fa fa-angle-down"></span></a>
-									<ul class="sub-menu sub-second-tier">
-										<li><a href="index.html">Right sidebar</a></li>
-										<li><a href="index-blogLsidebar.html">Left sidebar</a></li>
-										<li><a href="index-blogWsidebar.html">Wide sidebar</a></li>
-										<li><a href="index-blogNsidebar.html">No sidebar</a></li>
-										<li><a href="index-blogGrid.html">Grid layout</a></li>
-									</ul>
-								</li>
-								<li><a href="index-agency.html">Agency</a></li>
-								<li><a href="index-narrow.html">Slideshow narrow</a></li>
-							</ul>
+	                                                <a href="<?php echo Yii::$app->urlManager->createUrl('main/main/index') ; ?>">Главная</a>
+							
 						</li>
 						
 						<!-- Nav item - with two tier drop down -->
 						<li class="menu-item menu-item-has-children">
-							<a href="">Pages<span class="sub-drop-icon fa fa-angle-down"></span></a>
-							<ul class="sub-menu sub-menu-first">
-								<li><a href="404.html">404 page</a></li>
-								<li class="menu-item menu-item-has-children">
-									<a href="standard-page-1.html">Standard page<span class="sub-drop-icon sub-second-drop fa fa-angle-down"></span></a>
-									<ul class="sub-menu sub-second-tier">
-										<li><a href="standard-page-1.html">Right sidebar</a></li>
-										<li><a href="standard-page-2.html">Left sidebar</a></li>
-										<li><a href="standard-page-3.html">No sidebar</a></li>
-										<li><a href="standard-page-4.html">W/ Page header</a></li>
-									</ul>
-								</li>
-								<li><a href="features.html">Features</a></li>
-							</ul>
+	                                                <a href="<?php echo Yii::$app->urlManager->createUrl('main/main/karpaty') ; ?>">Карпаты</a>
 						</li>
 						
 						<!-- Nav item - with two tier drop down -->

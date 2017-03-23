@@ -3,6 +3,7 @@ namespace frontend\modules\main\controllers;
 
 use frontend\models\ContactForm;
 use frontend\components\Common;
+use frontend\models\Karpaty;
 
 class MainController extends \yii\web\Controller
 {
@@ -43,4 +44,15 @@ class MainController extends \yii\web\Controller
             ]);
     }
 
+    
+     public function actionKarpaty()
+    {
+        
+        $listKarpaty = Karpaty::getListKarpaty();
+        
+         
+        return $this->render('karpaty', ['listKarpaty' => $listKarpaty]);
+    }
+    
+    
 }

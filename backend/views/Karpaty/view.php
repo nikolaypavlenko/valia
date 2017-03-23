@@ -30,15 +30,21 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'name',
-            'photo1',
-            'photo2',
-            'photo3',
-            'road:ntext',
+            'photo',
             'duration',
-            'complexity',
-            'price',
-            'description',
+            'status',
+          
         ],
     ]) ?>
 
+    <span style="outline: 2px solid #120">
+                    
+            <img style="width:100px" src='<?=$model->photo ?>'  >
+            <a href="<?php echo Yii::$app->urlManager->createUrl(['karpaty/deleteimg', 'img' => $model->photo , 'id' => $model->id ]) ; ?>">
+                <button type="button" class="btn btn-default btn-lg btn-danger"  aria-label="Left Align" >
+                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </button> 
+            </a>
+    </span>
+    
 </div>

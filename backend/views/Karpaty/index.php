@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php //echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Karpaty', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Створити маршрут', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     
     <?= GridView::widget([
@@ -29,20 +29,14 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'name',
-            'photo1',
-            'photo2',
-            'photo3',
-            // 'road:ntext',
-            // 'duration',
-            // 'complexity',
-            // 'price',
-            // 'description',
-
+            'photo',
+            'duration',
+            'status',
+ 
             ['class' => 'yii\grid\ActionColumn',
                 
-                
                 //добавление кнопки imaje для загрузки файлов-картинок
-             'template' => '{view}&nbsp;&nbsp;{update}&nbsp;&nbsp;{image}&nbsp;&nbsp;{delete}',
+            /* 'template' => '{view}&nbsp;&nbsp;{update}&nbsp;&nbsp;{image}&nbsp;&nbsp;{delete}',
              'buttons' =>
                  [
                      'image' => function ($url, $model) {
@@ -54,9 +48,7 @@ $this->params['breadcrumbs'][] = $this->title;
                              'title' => Yii::t('yii', 'Загрузить фото')
                          ]); }
                  ]
-                
-             
-                
+             */
                 
              ],
             

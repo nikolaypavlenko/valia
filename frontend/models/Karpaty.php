@@ -62,14 +62,11 @@ class Karpaty extends \yii\db\ActiveRecord
     
     public static function getListKarpaty() {
         
-        
         $karpaty = Karpaty::find()
-                ->orderBy('id')
+                ->where (['status' => 1])
                 ->all();
-      
         
         return ($karpaty);
-
     }
     
     public function getImg()

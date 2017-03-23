@@ -8,6 +8,8 @@ use backend\models\KarpatySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
+use app\models\UploadForm;
 
 /**
  * KarpatyController implements the CRUD actions for Karpaty model.
@@ -67,9 +69,16 @@ class KarpatyController extends Controller
     {
         $model = new Karpaty();
         
-       
+        $foto = time(); // вводим переменную, которую закодирует мд5 при сохранении
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) ) {
+            $model->photo = UploadedFile::getInstance($model, 'photo');
+            if($model->photo){
+                    $model->photo->saveAs(Yii::getAlias('@frontend/web/images/') . md5($foto) . '.' . $model->photo->extension);
+                    $model->photo = '/frontend/web/images/' . md5($foto) . '.' . $model->photo->extension;
+                }
+            $model->save(false); //что-бы повторно не валидировалось, иначе присваивается $model->image = "i"
+
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -87,8 +96,19 @@ class KarpatyController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $model2 = $this->findModel($id); //в случае, если редактируются не все фото, данные перезаписуются 
+        $foto = time(); // вводим переменную, которую закодирует мд5 при сохранении
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) ) {
+            $model->photo = UploadedFile::getInstance($model, 'photo');
+            if($model->photo){
+                    $model->photo->saveAs(Yii::getAlias('@frontend/web/images/') . md5($foto) . '.' . $model->photo->extension);
+                    $model->photo = '/frontend/web/images/' . md5($foto) . '.' . $model->photo->extension;
+            } else {
+                $model->photo = $model2->photo; // если фото не загружалось, то перезапишется информация о существующем  фото
+            }
+            $model->save(false); //что-бы повторно не валидировалось, иначе присваивается $model->image = "i"
+
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
@@ -108,6 +128,20 @@ class KarpatyController extends Controller
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
+    }
+    
+     public function actionDeleteimg($img,  $id)
+    {
+       
+        if(file_exists ($_SERVER['DOCUMENT_ROOT'] . $img)) {
+            unlink($_SERVER['DOCUMENT_ROOT'] . $img); //указываем полный путь к файлу на сервере
+        } else {
+            throw new NotFoundHttpException('The requested file does not exist.');
+        }
+
+                  
+        return $this->redirect(['view', 'id' => $id]);
+
     }
 
     /**
