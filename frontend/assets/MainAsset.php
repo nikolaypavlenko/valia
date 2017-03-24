@@ -15,6 +15,7 @@ class MainAsset extends  AssetBundle{
         'source/css/style.css',
         'source/css/responsive.css',
         'source/css/animate.css',
+        'air-datepicker/dist/css/datepicker.min.css',
     ];
 
     public $js = [
@@ -23,7 +24,7 @@ class MainAsset extends  AssetBundle{
         'source/js/main.js',
         'source/js/lib/isotope/isotope.js',
         'source/js/lib/isotope/packery.js',
-
+        'air-datepicker/dist/js/datepicker.min.js',
     ];
 
     public $depends = [

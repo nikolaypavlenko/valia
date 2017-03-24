@@ -62,7 +62,7 @@
 	.header-wide .container{width:100%;}
 	.header-narrow .container{width:1140px;}
 
-	#site-logo{width:125px;height:80px;float:left;background-image:url('../img/logo_nogami.png');background-size:contain;background-repeat:no-repeat;margin-top:12px;display:block;}
+	#site-logo{width:295px;height:80px;float:left;background-image:url('../img/logo_nogami.png');background-size:contain;background-repeat:no-repeat;margin-top:12px;display:block;}
 
 	#header-nav{float:right;margin-top:16px;}
 	

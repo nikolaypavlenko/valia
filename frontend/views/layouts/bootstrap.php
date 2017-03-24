@@ -27,6 +27,8 @@ use yii\bootstrap\Nav;
 <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
+ <link href="vendor/bower/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
+        <script src="vendor/bower/air-datepicker/dist/js/datepicker.min.js"></script>
 <?php $this->head() ?>
 
 </head>

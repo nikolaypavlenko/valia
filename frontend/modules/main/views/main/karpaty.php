@@ -9,7 +9,7 @@
                     <img src="/source/img/featured_placeholder_1.jpg" class="image" alt="" />
                     <br><br>
                     
-                  <div class="row">
+                    <div class="row">
 			
 				<div class="col-xlarge-9 single-portfolio-left">
 				
@@ -22,7 +22,11 @@
                                                     Для желающих можем подобрать индивидуальный маршрут.</p>
 					</div>
 				</div>
-			</div>  
+                                <div class="col-xlarge-3" style="left: 21px">
+					<div class="datepicker-here" ></div>
+				</div>
+                        
+                    </div>  
                     
                      <!-- Portfolio filter -->
                     <div class="row">
