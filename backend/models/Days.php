@@ -55,4 +55,16 @@ class Days extends \yii\db\ActiveRecord
             'img3' => 'фото3',
         ];
     }
+    
+    public static function exictDay($karpaty_id){
+        $day = Days::find()
+                ->select(['day_number'])
+                ->where(['karpaty_id' => $karpaty_id])
+                 ->all();
+      
+        
+        return ($day);
+    }
+    
+    
 }

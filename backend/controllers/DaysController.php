@@ -40,7 +40,8 @@ class DaysController extends Controller
     {
         $searchModel = new DaysSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+        
+        
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -73,15 +74,18 @@ class DaysController extends Controller
     {
         $model = new Days();
         
-        $id = $_GET['id']; //получение id маршрута, отправленного с бэкенд/карпаты/индекс
-        $name = $_GET['name']; //получение названия маршрута, отправленного с бэкенд/карпаты/индекс
-
-       // $images = Img::find()->where(['karpaty_id' => $id])->all(); // выбор всех фото по маршруту 
+        $id = Yii::$app->request->get('id'); //получение id маршрута, отправленного с бэкенд/карпаты/индекс
+        $name = Yii::$app->request->get('name'); //получение названия маршрута, отправленного с бэкенд/карпаты/индекс
+        
+        $existDay = Days::exictDay($id); //выбираем массив уже созданных дней по маршруту
+      
+        // $images = Img::find()->where(['karpaty_id' => $id])->all(); // выбор всех фото по маршруту 
         $foto1 = time(); // вводим переменную, которую закодирует мд5 при сохранении
         $foto2 = time() + 2; // вводим переменную, которую закодирует мд5 при сохранении
         $foto3 = time() + 3; // вводим переменную, которую закодирует мд5 при сохранении
-
-       
+ 
+        $images = Days::find()->where(['karpaty_id' => $id])->all() ; 
+        
         //сохранение загружаемого файла
         if ($model->load(Yii::$app->request->post()) ) {
                 $model->karpaty_id = $id ;
@@ -105,10 +109,7 @@ class DaysController extends Controller
         $model->save(false); //что-бы повторно не валидировалось, иначе присваивается $model->image = "i"
          return $this->redirect(['view', 'id' => $model->id]);
         } else {
-            return $this->render('create', [
-                'model' => $model,
-                'images' => $images
-            ]);
+            return $this->render('create', compact('model', 'images', 'id', 'name', 'existDay'));
         }
 
     }

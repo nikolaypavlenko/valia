@@ -35,11 +35,12 @@ use yii\widgets\ActiveForm;
     <?php ActiveForm::end(); ?>
     
     
-        <?php foreach($images as $img) :?>
+       <?php foreach($images as $img) :?>
         <!-- поскольку фото в трех столбцах БД то через цикл получаем img1, img2, imge 3 -->
             <?php for($k = 1; $k < 4; $k++) :?> 
                 <?php $photo = img . $k ?>
                 <span style="outline: 2px solid #120">
+                    <span style="position: absolute"> <b>  <?= $img->day_number . " день" ?> </b> </span>
                     <img style="width:100px" src='<?=$img->$photo ?>'  >
                     <a href="<?php echo Yii::$app->urlManager->createUrl(['days/deleteimg', 'img' => $img->$photo , 'id' => $img->id ]) ; ?>">
                         <button type="button" class="btn btn-default btn-lg btn-danger"  aria-label="Left Align" >

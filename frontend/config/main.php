@@ -65,6 +65,8 @@ return [
             'showScriptName' => false,
             'enableStrictParsing' => false,
             'rules' => [
+                'index' => 'main/default/index',
+                'itinerary/<id:\d+>' => 'main/main/itinerary',
                 //'contact' => 'main/main/contact',
                 '<action>' => 'main/main/<action>',
             ],

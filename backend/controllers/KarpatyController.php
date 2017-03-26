@@ -68,15 +68,18 @@ class KarpatyController extends Controller
     public function actionCreate()
     {
         $model = new Karpaty();
+       
         
         $foto = time(); // вводим переменную, которую закодирует мд5 при сохранении
-
+        $row = Yii::$app->request->post();
+        //var_dump( $row ) ;
         if ($model->load(Yii::$app->request->post()) ) {
+            //echo $model->name . $model->price  . "wtyf"; die();
             $model->photo = UploadedFile::getInstance($model, 'photo');
             if($model->photo){
                     $model->photo->saveAs(Yii::getAlias('@frontend/web/images/') . md5($foto) . '.' . $model->photo->extension);
                     $model->photo = '/frontend/web/images/' . md5($foto) . '.' . $model->photo->extension;
-                }
+            }
             $model->save(false); //что-бы повторно не валидировалось, иначе присваивается $model->image = "i"
 
             return $this->redirect(['view', 'id' => $model->id]);

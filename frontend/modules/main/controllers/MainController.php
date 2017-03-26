@@ -4,6 +4,7 @@ namespace frontend\modules\main\controllers;
 use frontend\models\ContactForm;
 use frontend\components\Common;
 use frontend\models\Karpaty;
+use frontend\models\Days;
 
 class MainController extends \yii\web\Controller
 {
@@ -12,14 +13,8 @@ class MainController extends \yii\web\Controller
 
     public $success ;
 
-    public function actionIndex()
-    {
-       
-        return $this->render('index');
-    }
     
-    
-     public function actionContact()
+    public function actionContact()
     {
         $model = new ContactForm();
         
@@ -45,7 +40,7 @@ class MainController extends \yii\web\Controller
     }
 
     
-     public function actionKarpaty()
+    public function actionKarpaty()
     {
         
         $listKarpaty = Karpaty::getListKarpaty();
@@ -54,6 +49,19 @@ class MainController extends \yii\web\Controller
         return $this->render('karpaty', ['listKarpaty' => $listKarpaty]);
     }
     
+    
+    public function actionItinerary($id)
+    {
+        
+        $road = Days::getItinerary($id);
+        $itinerary = Karpaty::getItinerary($id);
+       // var_dump($itinerary); die();
+       // foreach($row as $item) {
+         //   echo $item->karpaty->price  ;
+       // }
+       
+        return $this->render('itinerary', compact('road', 'itinerary'));
+    }
     
 }
 

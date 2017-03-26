@@ -15,7 +15,8 @@ use yii\web\UrlManager;
 			
 				<div class="medium-header-container">
 					<!-- Site logo -->
-					<a href="index.html" id="site-logo"> </a>
+                                        <a href="<?php echo Yii::$app->urlManager->createUrl('main/default/index') ; ?>" id="site-logo"></a>
+
 					<!-- Mobile burger icon -->
 					<div id="mobile-nav-button">
 						<div id="mobile-nav-icon">
@@ -34,8 +35,7 @@ use yii\web\UrlManager;
 						
 						<!-- Nav item - with two tier drop down -->
 						<li class="menu-item menu-item-has-children">
-	                                                <a href="<?php echo Yii::$app->urlManager->createUrl('main/main/index') ; ?>">Главная</a>
-							
+	                                                <a href="<?php echo Yii::$app->urlManager->createUrl('main/default/index') ; ?>">Главная</a>
 						</li>
 						
 						<!-- Nav item - with two tier drop down -->
@@ -45,64 +45,22 @@ use yii\web\UrlManager;
 						
 						<!-- Nav item - with two tier drop down -->
 						<li class="menu-item menu-item-has-children">
-							<a href="about-1.html">About<span class="sub-drop-icon fa fa-angle-down"></span></a>
-							<ul class="sub-menu sub-menu-first">
-								<li><a href="about-1.html">About 1</a></li>
-								
-								<li class="menu-item menu-item-has-children">
-									<a href="about-2.html">About 2<span class="sub-drop-icon sub-second-drop fa fa-angle-down"></span></a>
-									<ul class="sub-menu sub-second-tier">
-										<li><a href="about-2-header.html">W/ Page header</a></li>
-									</ul>
-								</li>
-								
-							</ul>
+                                                        <a href="<?php echo Yii::$app->urlManager->createUrl('main/main/usefull') ; ?>">Полезное</a>
 						</li>
 						
 						<!-- Nav item - with two tier drop down -->
 						<li class="menu-item menu-item-has-children">
-							<a href="blog-Rsidebar.html">Blog<span class="sub-drop-icon fa fa-angle-down"></span></a>
-							<ul class="sub-menu sub-menu-first">
-								<li><a href="blog-Rsidebar.html">Right sidebar</a></li>
-								<li><a href="blog-Lsidebar.html">Left sidebar</a></li>
-								<li><a href="blog-Nsidebar.html">No sidebar</a></li>
-								<li><a href="blog-wide.html">Wide item</a></li>
-								<li><a href="blog-grid.html">Grid layout</a></li>
-								<li><a href="blog-header.html">W/ Page header</a></li>
-								
-								<li class="menu-item menu-item-has-children">
-									<a href="single-blog-1.html">Single blog<span class="sub-drop-icon sub-second-drop fa fa-angle-down"></span></a>
-									<ul class="sub-menu sub-second-tier">
-										<li><a href="single-blog-1.html">Right sidebar</a></li>
-										<li><a href="single-blog-2.html">Left sidebar</a></li>
-										<li><a href="single-blog-3.html">No sidebar</a></li>
-										<li><a href="single-blog-4.html">Slideshow post</a></li>
-										<li><a href="single-blog-5.html">Video post</a></li>
-										<li><a href="single-blog-6.html">W/ Page header</a></li>
-									</ul>
-								</li>
-								
-							</ul>
-						</li>
-						
-						<!-- Nav item - single tier drop down -->
-						<li class="menu-item menu-item-has-children">
-							<a href="portfolio-1.html">Portfolio<span class="sub-drop-icon fa fa-angle-down"></span></a>
-							<ul class="sub-menu sub-menu-first">
-								<li><a href="portfolio-1.html">Original</a></li>
-								<li><a href="portfolio-2.html">Grid - 4 column</a></li>
-								<li><a href="portfolio-3.html">Grid - 3 column</a></li>
-								<li><a href="portfolio-4.html">Grid - 2 column</a></li>
-								<li><a href="single-portfolio-1.html">Single portfolio 1</a></li>
-								<li><a href="single-portfolio-2.html">Single portfolio 2</a></li>
-							</ul>
+							<a href="<?php echo Yii::$app->urlManager->createUrl('main/main/questions') ; ?>">Вопросы-ответы</a>
 						</li>
 						
 						<!-- Nav item - single tier drop down -->
 						<li class="menu-item menu-item-has-children">
                                                     <a href="<?php echo Yii::$app->urlManager->createUrl('main/main/contact') ; ?>">Заявка</a>
-
-							
+						</li>
+                                                
+                                                <!-- Nav item - single tier drop down -->
+						<li class="menu-item menu-item-has-children">
+                                                    <a href="<?php echo Yii::$app->urlManager->createUrl('main/main/discont') ; ?>">Скидки</a>
 						</li>
 						
 					</ul>

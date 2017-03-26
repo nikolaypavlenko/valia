@@ -34,10 +34,10 @@ class Karpaty extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'photo1', 'photo2', 'photo3', 'road', 'duration', 'complexity', 'price', 'description'], 'required'],
+            [['name', 'photo', 'road', 'duration',  'price', 'description'], 'required'],
             [['road'], 'string'],
-            [['price', 'description'], 'integer'],
-            [['name', 'photo1', 'photo2', 'photo3', 'duration', 'complexity'], 'string', 'max' => 255],
+            [['price', ], 'integer'],
+            [['price', 'description', 'lenth', 'road'], 'safe'],
         ];
     }
 
@@ -49,9 +49,7 @@ class Karpaty extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'name' => 'Name',
-            'photo1' => 'Photo1',
-            'photo2' => 'Photo2',
-            'photo3' => 'Photo3',
+            'photo' => 'Photo1',
             'road' => 'Road',
             'duration' => 'Duration',
             'complexity' => 'Complexity',
@@ -69,9 +67,16 @@ class Karpaty extends \yii\db\ActiveRecord
         return ($karpaty);
     }
     
-    public function getImg()
+     public static function getItinerary($id) {
+        
+        $karpaty = Karpaty::findOne($id);
+               
+        return ($karpaty);
+    }
+    
+    public function getDays()
     {
-        return $this->hasOne(Img::className(), ['karpaty_id' => 'id']);
+        return $this->hasOne(Days::className(), ['karpaty_id' => 'id']);
     }
     
     

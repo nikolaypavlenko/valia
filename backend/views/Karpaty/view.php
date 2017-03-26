@@ -33,6 +33,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'photo',
             'duration',
             'status',
+            'road',
+            'lenth',
+            'description',
+            'price',
+            'complexity'
           
         ],
     ]) ?>
@@ -46,5 +51,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 </button> 
             </a>
     </span>
+    
+    
+   
     
 </div>

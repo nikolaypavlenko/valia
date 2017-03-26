@@ -1,4 +1,7 @@
+<?php
+use yii\helpers\Url;
 
+?>
 <div id="main-content" class="edge-padding">
 	
 	<!-- Portfolio section -->
@@ -45,7 +48,7 @@
 				
                                 <?php  foreach ($listKarpaty as $karpaty) :?> 
                                     <li class="col-xlarge-3 col-medium-3 <?php echo $karpaty->duration ?>">
-                                            <a href="single-portfolio-1.html"  class="portfolio-item">
+                                            <a href="<?php echo Yii::$app->urlManager->createUrl(['main/main/itinerary', 'id' => $karpaty->id]) ; ?> "  class="portfolio-item">
                                                     <img src="<?php echo $karpaty->photo ?>" class="image" alt="" />
                                                     <!-- portfolio item hover -->
                                                     <div class="portfolio-hover">

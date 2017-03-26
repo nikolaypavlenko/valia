@@ -14,20 +14,27 @@
                       <div class="carousel-inner" role="listbox">
                         <div class="item active">
                           <img src="/frontend/web/source/img/featured_placeholder_2.jpg" alt="...">
-                          <div class="carousel-caption">
-                            ВАЛЯ ПРИВІТ
+                          <div class="carousel-caption" style="top: 222px">
+                              <p> ОВЕЯННЫЙ ЛЕГЕНДАМИ КРАЙ </p>
+                              <br>
+                              <a href="single-blog-1.html" class="primary-button font-reg hov-bk">Подробнее</a>
+                              <p> </p>
                           </div>
                         </div>
                         <div class="item">
                           <img src="/frontend/web/source/img/featured_placeholder_3.jpg" alt="...">
-                          <div class="carousel-caption">
-                            ВАЛЯ ВПЕРЕД
+                          <div class="carousel-caption" style="top: 222px">
+                              <p>ВАЛЯ ВПЕРЕД</p>
+                              <br>
+                            <a href="single-blog-1.html" class="primary-button font-reg hov-bk">Подробнее</a>
                           </div>
                         </div>
                         <div class="item">
                           <img src="/frontend/web/source/img/featured_placeholder_1.jpg" alt="...">
-                          <div class="carousel-caption">
-                           ВАЛЯ ЧУДО
+                          <div class="carousel-caption" style="top: 222px">
+                              <p>ВАЛЯ ЧУДО</p>
+                              <br>
+                           <a href="single-blog-1.html" class="primary-button font-reg hov-bk">Подробнее</a>
                           </div>
                         </div>
                     </div>
@@ -65,9 +72,15 @@
 									<span>28 March 2016</span>
 								</div>
 								<div class="page-content">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque nibh enim, quis euismod enim lacinia nec. Phasellus quam diam, semper in erat eu, efficitur molestie purus. Sed a elementum mi. Sed interdum mattis risus, sit amet eleifend ligula luctus ut. Sed ullamcorper lorem aliquam, tincidunt lorem et, ultrices est. Suspendisse eleifend dui odio, id volutpat quam iaculis eu. Nunc sit amet scelerisque mauris. Phasellus volutpat mauris ac sem tincidunt, in fringilla arcu ultrices. Phasellus scelerisque eros vel pulvinar gravida. Aenean suscipit felis orci, sed egestas libero dignissim at. Sed commodo malesuada ligula, nec vehicula risus fermentum sed.</p>
+									<p>Nogami – группа туристов-единомышленников, любящих природу и активный отдых. Мы работаем для людей, которые хотят сходить в поход, но не готовы идти в одиночку или уже собрали друзей, но не могут найти проводника. 
+                                                                            Можем организовать и провести любой туристический поход по Крыму или Карпатам 
+                                                                            в удобное для вас время. Для человека, который никогда не был в походе, но хочет попробовать свои силы, предусмотрены трехдневные походы легкой и средней сложности. Для желающих вырваться из обыденности и городской 
+                                                                            суеты на более длительный срок предлагаем шестидневные походы. На нашем сайте вы найдете график и описание маршрутов, ответы на вопросы, связанные с подготовкой к походу, полезные статьи, информацию о скидках. Если в одну из ночей вам вдруг 
+                                                                            станет тесно в четырех стенах, и вы захотите еще раз в своей жизни (а может быть и в первый раз) увидеть горы – обращайтесь к нам.
+                                                                            Nogami. Мы знаем куда идем.
+                                                                        </p>
 								</div>
-								<a href="single-blog-1.html" class="primary-button font-reg hov-bk">Read more</a>
+								<a href="single-blog-1.html" class="primary-button font-reg hov-bk">Подробнее</a>
 							</div>
 						</li>
 						
@@ -86,7 +99,7 @@
 										<div class="page-content">
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque nibh enim, quis euismod enim lacinia nec. Phasellus quam diam, semper in erat eu, efficitur molestie purus.</p>
 										</div>
-										<a href="single-blog-1.html" class="primary-button font-reg hov-bk">Read more</a>
+										<a href="single-blog-1.html" class="primary-button font-reg hov-bk">Подробнее</a>
 									</div>
 								</div>
 							</div>
@@ -107,7 +120,7 @@
 										<div class="page-content">
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque nibh enim, quis euismod enim lacinia nec. Phasellus quam diam, semper in erat eu, efficitur molestie purus.</p>
 										</div>
-										<a href="single-blog-1.html" class="primary-button font-reg hov-bk">Read more</a>
+										<a href="single-blog-1.html" class="primary-button font-reg hov-bk">Подробнее</a>
 									</div>
 								</div>
 							</div>
@@ -128,7 +141,7 @@
 										<div class="page-content">
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque nibh enim, quis euismod enim lacinia nec. Phasellus quam diam, semper in erat eu, efficitur molestie purus.</p>
 										</div>
-										<a href="single-blog-1.html" class="primary-button font-reg hov-bk">Read more</a>
+										<a href="single-blog-1.html" class="primary-button font-reg hov-bk">Подробнее</a>
 									</div>
 								</div>
 							</div>
@@ -207,10 +220,8 @@
 						<h3 class="font-reg">Follow</h3>
 						<ul>
 							<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fa fa-vkontacte"></i></a></li>
+							
 						</ul>
 					</div>
 					
