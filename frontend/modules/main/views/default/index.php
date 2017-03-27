@@ -1,3 +1,10 @@
+<?php
+
+use frontend\models\Schedule;
+use yii\helpers\Url;
+
+?>
+
 <div id="main-content" class="edge-padding">
 
 	<!-- featured section -->
@@ -146,14 +153,44 @@
 								</div>
 							</div>
 						</li>
-						
 					</ul>
-					
 				</div>
 				
 				<!-- post sidebar -->
 				<div class="col-xlarge-4 col-medium-4 post-sidebar right-sidebar">
 					
+                                        <!-- schedul -->
+                                    <?php  for($k = 5; $k < 10; $k++) : ?>    
+                                        <?php foreach ($period as $key => $item) : ?>
+                                            <?php if ($key == $k)   :?>
+                                                <div class="panel panel-default">
+                                                        <!-- Default panel contents -->
+                                                    <div class="panel-heading" style="padding: 3px 0px 3px 35px;"><?php echo $item ?></div>
+                                                    <?php foreach ($schedule as $row) : ?>
+                                                        <?php if ($key == Schedule::functionMounth($row->begin)) :?>
+                                                           <!-- Table -->
+                                                            <table class="table">
+                                                                 <tr>
+                                                                     <td style="padding: 3px 0px 0px 0px; width:78px"><?php echo "&nbsp;" . Schedule::functionDate($row->begin) . "-" ?><?php echo Schedule::functionDate($row->end)  ?></td>
+                                                                     <td style="padding: 3px 0px 0px 0px;"> 
+                                                                         <a href="<?php echo Yii::$app->urlManager->createUrl(['main/main/itinerary', 'id' => $row->karpaty->id]); ?> " >
+                                                                             <?php echo $row->karpaty->name ?> 
+                                                                         </a>
+                                                                     </td>
+                                                                     <td style="padding: 3px 0px 0px 0px; text-align:right "> <?php echo $row->length . "&nbsp;" ?></td>
+                                                                 </tr>
+                                                             </table>
+                                                        <?php endif; ?>
+                                                    <?php endforeach; ?>
+                                                </div>
+                                            <?php endif ;?>
+                                        <?php endforeach ;?>
+                                    <?php endfor ; ?>
+                                        
+                                        <div  style="left: 21px">
+                                            <div class="datepicker-here" ></div>
+                                        </div>
+                                    
 					<!-- posts widget example -->
 					<div class="sidebar-widget posts-widget">
 						<h3 class="font-reg">Latest Posts</h3>
@@ -237,27 +274,7 @@
 						<img src="source/img/portfolio_placeholder_1.jpg" alt="" class="image"/>
 					</div>
 					
-					<!-- tag cloud widget -->
-					<div class="sidebar-widget font-reg widget_tag_cloud">
-						<h3 class="font-reg">Tags</h3>
-						<div class="tagcloud">
-							<a href="">Travelling</a>
-							<a href="">Photography</a>
-							<a href="">Landscapes</a>
-							<a href="">Lifestyle</a>
-						</div>
-					</div>	
 					
-					<!-- search widget -->
-					<div class="sidebar-widget font-reg search-widget">
-						<h3 class="font-reg">Search</h3>
-						<form>
-							<div>
-								<input type="text" value="">
-								<input type="submit" id="searchsubmit" value="Search">
-							</div>
-						</form>
-					</div>
 					
 				</div>
 			

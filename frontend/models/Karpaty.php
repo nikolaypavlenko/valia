@@ -79,6 +79,10 @@ class Karpaty extends \yii\db\ActiveRecord
         return $this->hasOne(Days::className(), ['karpaty_id' => 'id']);
     }
     
+    public function getSchedule()
+    {
+        return $this->hasOne(Shedule::className(), ['karpaty_id' => 'id']);
+    }
     
 }
 

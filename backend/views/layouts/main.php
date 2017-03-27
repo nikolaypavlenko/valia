@@ -37,9 +37,8 @@ AppAsset::register($this);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
         ['label' => 'Karpaty', 'url' => ['/karpaty/index']],
-        ['label' => 'Image', 'url' => ['/img/index']],
-        ['label' => 'Road', 'url' => ['/road/index']],
-        ['label' => 'Days', 'url' => ['/days/index']],
+        ['label' => 'Расписание', 'url' => ['/schedule/index']],
+        ['label' => 'По дням', 'url' => ['/days/index']],
         
     ];
     if (Yii::$app->user->isGuest) {
