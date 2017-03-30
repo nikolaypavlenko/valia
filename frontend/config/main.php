@@ -66,7 +66,8 @@ return [
             'enableStrictParsing' => false,
             'rules' => [
                 'index' => 'main/default/index',
-                'itinerary/<id:\d+>' => 'main/main/itinerary',
+                '<action>/<id:\d+>' => 'main/main/<action>',
+                //'detail/<id:\d+>' => 'main/main/detail',
                 //'contact' => 'main/main/contact',
                 '<action>' => 'main/main/<action>',
             ],

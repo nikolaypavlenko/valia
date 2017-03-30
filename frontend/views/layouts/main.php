@@ -35,15 +35,15 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'ГЛАВНАЯ', 'url' => ['/site/index']],
-        ['label' => 'КАРПАТЫ', 'url' => ['/site/karpaty']],
-        ['label' => 'ПОЛЕЗНОЕ', 'url' => ['/site/useful']],
-        ['label' => 'ВОПРОСЫ-ОТВЕТЫ', 'url' => ['/site/question']],
-        ['label' => 'ЗАЯВКИ', 'url' => ['/site/bid']],
-        ['label' => 'СКИДКИ', 'url' => ['/site/contact']],
-        ['label' => 'О НАС', 'url' => ['/site/about']],
+        //['label' => 'ГЛАВНАЯ', 'url' => ['/site/index']],
+        //['label' => 'КАРПАТЫ', 'url' => ['/site/karpaty']],
+       // ['label' => 'ПОЛЕЗНОЕ', 'url' => ['/site/useful']],
+        //['label' => 'ВОПРОСЫ-ОТВЕТЫ', 'url' => ['/site/question']],
+        //['label' => 'ЗАЯВКИ', 'url' => ['/site/bid']],
+        //['label' => 'СКИДКИ', 'url' => ['/site/contact']],
+        //['label' => 'О НАС', 'url' => ['/site/about']],
     ];
-    /*if (Yii::$app->user->isGuest) {
+    if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
@@ -55,7 +55,7 @@ AppAsset::register($this);
             )
             . Html::endForm()
             . '</li>';
-    }*/
+    }
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => $menuItems,

@@ -28,22 +28,28 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
-        'brandUrl' => Yii::$app->homeUrl,
+        'brandLabel' => 'Nogami.com.ua',
+        'brandUrl' => '/',
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'Karpaty', 'url' => ['/karpaty/index']],
-        ['label' => 'Расписание', 'url' => ['/schedule/index']],
-        ['label' => 'По дням', 'url' => ['/days/index']],
+  //  $menuItems = [
+       
         
-    ];
+  //  ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
+        $menuItems = [ 
+            ['label' => 'Home', 'url' => ['/site/index']],
+            ['label' => 'Karpaty', 'url' => ['/karpaty/index']],
+            ['label' => 'Расписание', 'url' => ['/schedule/index']],
+            ['label' => 'По дням', 'url' => ['/days/index']],
+            ['label' => 'Полезное', 'url' => ['/articl/index']],
+        ];
+        
+        
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
@@ -52,6 +58,7 @@ AppAsset::register($this);
             )
             . Html::endForm()
             . '</li>';
+       
     }
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],

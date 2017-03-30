@@ -45,7 +45,7 @@ use yii\web\UrlManager;
 						
 						<!-- Nav item - with two tier drop down -->
 						<li class="menu-item menu-item-has-children">
-                                                        <a href="<?php echo Yii::$app->urlManager->createUrl('main/main/usefull') ; ?>">Полезное</a>
+                                                        <a href="<?php echo Yii::$app->urlManager->createUrl('main/main/articls') ; ?>">Полезное</a>
 						</li>
 						
 						<!-- Nav item - with two tier drop down -->

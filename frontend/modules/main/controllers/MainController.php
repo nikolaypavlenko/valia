@@ -5,6 +5,8 @@ use frontend\models\ContactForm;
 use frontend\components\Common;
 use frontend\models\Karpaty;
 use frontend\models\Days;
+use frontend\models\Articl;
+
 
 class MainController extends \yii\web\Controller
 {
@@ -61,6 +63,32 @@ class MainController extends \yii\web\Controller
        // }
        
         return $this->render('itinerary', compact('road', 'itinerary'));
+    }
+    
+    public function actionArticls()
+    {
+        
+       
+        $articls = Articl::find()->all();
+       // var_dump($itinerary); die();
+       // foreach($row as $item) {
+         //   echo $item->karpaty->price  ;
+       // }
+       
+        return $this->render('articls', compact('articls'));
+    }
+    
+    public function actionDetail($id)
+    {
+        
+        $text = Articl::findOne($id);
+       // $itinerary = Karpaty::getItinerary($id);
+       // var_dump($itinerary); die();
+       // foreach($row as $item) {
+         //   echo $item->karpaty->price  ;
+       // }
+       
+        return $this->render('detail', compact('text'));
     }
     
 }
